@@ -1,0 +1,33 @@
+.categoryheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #780000;
+  color: #ffffff;
+
+  .categoryheader__category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    p {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+    img {
+      height: 40px;
+    }
+  }
+
+  .categoryheader__category:hover {
+    background-color: #C1121F;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
