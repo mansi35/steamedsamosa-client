@@ -1,0 +1,46 @@
+.topoffers {
+  height: 400px;
+  background-color: #669BBC;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.splide__slide {
+  width: auto !important;
+  padding: 10px 10px 0 10px !important;
+}
+
+.topoffer__description {
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.topoffer__details {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .topOffer__price {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .topoffer__bookbutton {
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #003049;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+  }
+}

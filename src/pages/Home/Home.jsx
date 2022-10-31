@@ -1,8 +1,15 @@
 import React from 'react';
+import Categories from '../../components/Categories/Categories';
+import HomeReviews from '../../components/HomeReviews/HomeReviews';
+import TopOffers from '../../components/TopOffers/TopOffers';
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <TopOffers />
+      <Categories />
+      <HomeReviews />
+    </div>
   );
 }
 
