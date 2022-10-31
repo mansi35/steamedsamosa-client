@@ -1,0 +1,27 @@
+.customerreviews {
+  height: 400px;
+  background-color: #669BBC;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .customerreviews__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px 0 60px;
+    text-align: center;
+  }
+
+  .customerreviews__reviews {
+    width: 60%;
+    padding: 0 60px 0 20px;
+  }
+}
+
+// .splide__list {
+//   width: 100%;
+// }

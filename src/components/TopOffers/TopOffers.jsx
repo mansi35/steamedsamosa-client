@@ -26,7 +26,7 @@ function TopOffers() {
         <SplideSlide>
           <div className="topoffer__description">
             <img src={offer1} alt="1" />
-            <h4>Dhamaka Wedding Offer: All in one package</h4>
+            <h3>Dhamaka Wedding Offer: All in one package</h3>
             <div className="topoffer__details">
               <div className="topOffer__price">
                 <s>₹33,858</s>
@@ -39,7 +39,7 @@ function TopOffers() {
         <SplideSlide>
           <div className="topoffer__description">
             <img src={offer2} alt="2" />
-            <h4>The Small Feet Package: Baby Shower Special</h4>
+            <h3>The Small Feet Package: Baby Shower Special</h3>
             <div className="topoffer__details">
               <div className="topOffer__price">
                 <s>₹33,858</s>

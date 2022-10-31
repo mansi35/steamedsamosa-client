@@ -1,6 +1,6 @@
 import React from 'react';
 import Categories from '../../components/Categories/Categories';
-import HomeReviews from '../../components/HomeReviews/HomeReviews';
+import CustomerReviews from '../../components/CustomerReviews/CustomerReviews';
 import TopOffers from '../../components/TopOffers/TopOffers';
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
     <div>
       <TopOffers />
       <Categories />
-      <HomeReviews />
+      <CustomerReviews />
     </div>
   );
 }
