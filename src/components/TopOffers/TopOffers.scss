@@ -8,6 +8,10 @@
 .splide__slide {
   width: auto !important;
   padding: 10px 10px 0 10px !important;
+
+  img {
+    height: 283px;
+  }
 }
 
 .topoffer__description {
@@ -43,5 +47,35 @@
     border-radius: 7px;
     padding: 10px;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .splide__slide {
+    img {
+      height: 150px;
+    }
+  }
+  .topoffers {
+    height: 280px;
+    .category {
+      img {
+        width: 50%;
+      }
+    }
+  }
+  .topoffer__description {
+    width: 300px;
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .topoffer__details {
+    s {
+      font-size: 12px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 }

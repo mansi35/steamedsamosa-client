@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import {
   Facebook, Google, LinkedIn, Instagram,
 } from '@mui/icons-material';

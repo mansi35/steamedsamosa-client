@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import feedback from '../../images/feedback.png';
 import './CustomerReview.scss';

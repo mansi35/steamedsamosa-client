@@ -17,6 +17,7 @@ function TopOffers() {
           drag: 'free',
           perPage: 3,
           pagination: false,
+          gap: '10px',
           autoScroll: {
             speed: 0.5,
           },
