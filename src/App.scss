@@ -10,3 +10,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: #003049;
+}
+
+::selection {
+  color: #ffffff;
+  background: #003049;
+}

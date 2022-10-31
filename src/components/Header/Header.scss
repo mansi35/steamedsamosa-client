@@ -8,6 +8,16 @@
   padding: 15px;
   margin-bottom: 10px;
 
+  ::-moz-selection { /* Code for Firefox */
+    color: #ffffff;
+    background: #780000;
+  }
+  
+  ::selection {
+    color: #ffffff;
+    background: #780000;
+  }
+
   .header__logo {
     display: flex;
     flex-direction: row;
