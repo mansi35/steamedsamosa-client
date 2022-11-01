@@ -1,0 +1,17 @@
+.catererpage__desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .catererpage__menu {
+    width: 75%;
+    background-color: #669BBC;
+    margin: 30px 30px 30px 60px;
+  }
+
+  .catererpage__order {
+    width: 25%;
+    margin: 30px 60px 30px 30px;
+  }
+}

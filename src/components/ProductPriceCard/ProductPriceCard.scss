@@ -1,0 +1,60 @@
+.pricecard {
+  background-color: #FDF0D5;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 5px 4px 12px 1px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+
+  button {
+    width: 100%;
+    color: #ffffff;
+    background-color: #780000;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 7px;
+    font-family: Poppins !important;
+
+    b {
+      font-size: 16px;
+    }
+  }
+
+  .pricecard__pricedesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    * {
+      margin: 0;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    .pricecard__discount {
+      background-color: #780000;
+      border-radius: 7px;
+      padding: 5px 20px;
+      color: #ffffff;
+    }
+  }
+
+  .pricecard_guests {
+    p {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  .pricecard__dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 15px 0;
+  }
+
+  .css-187mznn-MuiSlider-root {
+    color: #780000 !important;
+  }
+}
