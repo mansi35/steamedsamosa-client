@@ -9869,6 +9869,7 @@ react-transition-group@^4.4.2, react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+<<<<<<< HEAD
 react-view-pager@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/react-view-pager/-/react-view-pager-0.6.0.tgz#6c6be04b0cc3b907b5ceafec7b2ab6e7228df650"
@@ -9881,6 +9882,8 @@ react-view-pager@^0.6.0:
     resize-observer-polyfill "1.5.0"
     tabbable "1.1.2"
 
+=======
+>>>>>>> 0f02f747baf4bd06a1db52e4a5771b14d640d79c
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"

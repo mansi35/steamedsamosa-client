@@ -5,6 +5,7 @@ import Auth from './pages/Auth/Auth';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
 import CatererPage from './pages/CatererPage/CatererPage';
 
@@ -19,6 +20,7 @@ function App() {
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/caterer" element={<CatererPage />} />
+            <Route exact path="/product" element={<ProductDescription />} />
           </Routes>
         </div>
         <Footer />
