@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable default-param-last */
 import { AUTH, LOGOUT } from '../../constants/actionTypes';
 
 const authReducer = (state = { authData: null }, action) => {

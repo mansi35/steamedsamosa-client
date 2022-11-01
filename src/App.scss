@@ -1,0 +1,22 @@
+body {
+  background-color: #FFF8EA;
+  margin: 0;
+  font-family: Poppins;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: #003049;
+}
+
+::selection {
+  color: #ffffff;
+  background: #003049;
+}

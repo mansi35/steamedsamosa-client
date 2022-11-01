@@ -1,0 +1,17 @@
+.customerreview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 280px;
+  background-color: #FDF0D5;
+  border-radius: 7px;
+  padding: 10px;
+
+  img {
+    width: 190px;
+    border-radius: 7px;
+  }
+}

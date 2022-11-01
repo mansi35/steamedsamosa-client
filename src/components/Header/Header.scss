@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003049;
+  color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+
+  ::-moz-selection { /* Code for Firefox */
+    color: #ffffff;
+    background: #780000;
+  }
+  
+  ::selection {
+    color: #ffffff;
+    background: #780000;
+  }
+
+  .header__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+  }
+
+  .header__profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+  }
+
+  .header__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DADAE3;
+    padding: 10px;
+    margin-left: 10px;
+    margin: 7px;
+    border-radius: 7px;
+    width: 40%;
+
+    input {
+      border: none;
+      background-color: transparent;
+      outline-width: 0;
+      width: 100%;
+    }
+
+    svg {
+        color: #003049;
+        height: 18px;
+    }
+  }
+}
