@@ -3,23 +3,27 @@
   background-color: #669BBC;
   margin: 10px 0;
   padding: 10px;
-}
 
-.splide__slide {
-  width: auto !important;
-  padding: 10px 10px 0 10px !important;
-
-  img {
-    height: 283px;
+  .splide__slide {
+    width: auto !important;
+    padding: 10px 10px 0 10px !important;
+  
+    img {
+      height: 283px;
+      width: 450px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+  .topoffer__description {
+    width: 450px;
+    cursor: pointer;
+    h3 {
+      margin-bottom: 0;
+    }
   }
 }
 
-.topoffer__description {
-  cursor: pointer;
-  h3 {
-    margin-bottom: 0;
-  }
-}
 
 .topoffer__details {
   display:flex;
