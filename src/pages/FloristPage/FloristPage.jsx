@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import FloristExtrasCard from '../../components/FloristExtrasCard/FloristExtrasCard';
 import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
@@ -10,7 +11,9 @@ function FloristPage() {
       <ImagesBanner />
       <div className="floristpage__desc">
         <div className="floristpage__menu">
-          Florist Packages
+          {[...Array(80)].map((_) => (
+            <p>Florist Packages</p>
+          ))}
         </div>
         <div className="floristpage__order">
           <ProductPriceCard />
