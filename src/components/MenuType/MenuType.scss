@@ -28,3 +28,14 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 1000px) {
+  .menuType {
+    height: 350px;
+
+    .menuType__items {
+      height: 300px;
+    }
+  }
+}

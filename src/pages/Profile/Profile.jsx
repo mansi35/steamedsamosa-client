@@ -6,9 +6,9 @@ import PastBookings from '../../components/PastBookings/PastBookings';
 function Profile() {
   return (
     <div>
-        <ProfileDescription />
-        <UpcomingBookings />
-        <PastBookings />
+      <ProfileDescription />
+      <UpcomingBookings />
+      <PastBookings />
     </div>
   );
 }

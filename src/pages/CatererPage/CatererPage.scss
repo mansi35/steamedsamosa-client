@@ -22,3 +22,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .catererpage__desc {
+    flex-wrap: wrap-reverse;
+    .catererpage__menu {
+      width: 100%;
+      margin: 0 30px 30px 30px;
+    }
+  
+    .catererpage__order {
+      width: 100%;
+      margin: 30px;
+    }  
+  }
+}
