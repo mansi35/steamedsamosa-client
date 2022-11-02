@@ -1,0 +1,85 @@
+.pkg_component {
+    display: flex;
+    flex-direction: row;
+
+    height: 250px;
+    background-color: #FFF8EA;
+    margin: 30px 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+
+    img {
+        height: 220px;
+        border-radius: 10px;
+        justify-content: center;
+        padding: 15px 30px 15px 0px;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .main_heading {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+    
+        .tag {
+            background-color: #669BBC;
+            border-radius: 5px;
+            padding: 2px;
+            p {
+                font-size: 12px;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 0.3px;
+            }
+        }
+    }
+}
+
+.right {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  
+    .prices {
+      display: flex;
+      flex-direction: column;
+  
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+      }
+    }
+  
+    .bookbutton {
+      border: none;
+      color: #ffffff;
+      font-weight: bold;
+      background-color: #780000;
+      border-radius: 7px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
