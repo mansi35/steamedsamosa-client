@@ -1,31 +1,30 @@
+.profiledescription {
+  padding: 60px;
+}
+
 .profileheader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    // background-color: hsl(0, 100%, 24%);
     color: #000000;
 
     .profiletitle {
         font-size: 20px;
-        margin-left: 12%;
     }
 }
-.profiledesc { 
+
+.profiledesc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    // background-color: hsl(0, 100%, 24%);
-    color: #000000;
+
+    .profile__complete {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 80px;
+    }
 
     .profile__category {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 15px;
       .profileAttribute {
         color: #780000;
       }
