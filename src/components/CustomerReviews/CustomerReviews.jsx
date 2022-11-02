@@ -21,7 +21,7 @@ function CustomerReviews() {
             focus: 'center',
             drag: 'free',
             perPage: 3,
-            pagination: false,
+            pagination: true,
           }}
         >
           {[...Array(10)].map((_) => (

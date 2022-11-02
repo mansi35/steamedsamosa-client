@@ -6,7 +6,11 @@ import Home from './pages/Home/Home';
 import Packages from './pages/Packages/Packages';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Profile from './pages/Profile/Profile';
+import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
+import CatererPage from './pages/CatererPage/CatererPage';
+import FloristPage from './pages/FloristPage/FloristPage';
 
 function App() {
   return (
@@ -18,10 +22,12 @@ function App() {
           <Routes>
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/caterer" element={<CatererPage />} />
+            <Route exact path="/product" element={<ProductDescription />} />
+            <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/packagelist" element={<Packages />} />
           </Routes>
         </div>
-        <Footer />
       </div>
     </Router>
   );

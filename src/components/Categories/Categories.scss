@@ -4,7 +4,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
 
     @media only screen and (max-width: 400px) {
       flex-wrap: wrap;
@@ -22,5 +21,24 @@
     margin: 10px;
     padding: 15px;
     color: #ffffff;
+    cursor: pointer;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  .category:hover {
+    background-color: #6c030b;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .categories {
+    .category {
+      img {
+        width: 50%;
+      }
+    }
   }
 }

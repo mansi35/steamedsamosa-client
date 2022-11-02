@@ -15,8 +15,8 @@ function Categories() {
           <h2>Wedding</h2>
         </div>
         <div className="category">
-          <img src={birthday} alt="birthday party" />
           <h2>Birthday Party</h2>
+          <img src={birthday} alt="birthday party" />
         </div>
       </div>
       <div className="categories__row">

@@ -20,8 +20,21 @@
     width: 60%;
     padding: 0 60px 0 20px;
   }
+
+  .splide__slide {
+    width: auto !important;
+    padding: 10px 10px 0 10px !important;
+  }
 }
 
-// .splide__list {
-//   width: 100%;
-// }
+@media only screen and (max-width: 600px) {
+  .customerreviews {
+    flex-wrap: wrap;
+    height: 650px;
+
+    .customerreviews__reviews {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

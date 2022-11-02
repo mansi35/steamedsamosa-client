@@ -1,0 +1,44 @@
+.bookingheading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+
+  .bookingheading__heading {
+      font-size: 20px;
+      margin-left: 12%;
+  }
+}
+.bookingcard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  border-radius: 20px;
+  box-shadow: 5px 4px 12px 1px rgba(0, 0, 0, 0.25);
+  width: 35vw;
+  margin-left: 10vw;
+
+  .bookingcard__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    
+    img {
+      width: 15vw;
+    }
+
+    button {
+      background-color: #780000;
+      border-radius: 7px;
+      padding: 5px 20px;
+      color: #ffffff;
+    }
+  }
+}
+

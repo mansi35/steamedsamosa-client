@@ -3,8 +3,8 @@ import './TopOffers.scss';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import '@splidejs/splide/dist/css/splide.min.css';
-import offer1 from '../../images/temp1.png';
-import offer2 from '../../images/temp2.png';
+import offer1 from '../../images/image 25.png';
+import offer2 from '../../images/babyshower.jpg';
 
 function TopOffers() {
   return (
@@ -17,6 +17,7 @@ function TopOffers() {
           drag: 'free',
           perPage: 3,
           pagination: false,
+          gap: '10px',
           autoScroll: {
             speed: 0.5,
           },
