@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
 import CatererPage from './pages/CatererPage/CatererPage';
+import FloristPage from './pages/FloristPage/FloristPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/caterer" element={<CatererPage />} />
+            <Route exact path="/florist" element={<FloristPage />} />
             <Route exact path="/product" element={<ProductDescription />} />
           </Routes>
         </div>
