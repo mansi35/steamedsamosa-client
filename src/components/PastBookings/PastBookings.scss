@@ -1,3 +1,8 @@
+.pastbookings {
+  padding: 60px;
+  padding-top: 30px;
+}
+
 .bookingheading {
   display: flex;
   flex-direction: row;
@@ -7,56 +12,51 @@
 
   .bookingheading__heading {
       font-size: 20px;
-      margin-left: 12%;
   }
 }
-.bookingcard {
+
+.bookingcards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #000000;
-  border-radius: 20px;
-  box-shadow: 5px 4px 12px 1px rgba(0, 0, 0, 0.25);
-  width: 35vw;
-  margin-left: 10vw;
-  margin-bottom: 4vw;
+  flex-wrap: wrap;
 
-  .bookingcard__column {
+  .bookingcard {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 15px;
-    
-    img {
-      width: 15vw;
-    }
+    color: #000000;
+    border-radius: 20px;
+    box-shadow: 5px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    margin: 40px 60px ;
 
-    button {
-      background-color: #780000;
-      border-radius: 7px;
-      padding: 5px 20px;
-      color: #ffffff;
+    .bookingcard__column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 15px;
+
+      img {
+        width: 200px;
+      }
+
+      button {
+        background-color: #780000;
+        border-radius: 7px;
+        padding: 5px 20px;
+        color: #ffffff;
+      }
     }
   }
 }
 
 .loadMore {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #000000;
-  margin-left: 12%;
-  margin-bottom: 3vw;
-
   button {
-      background-color: #780000;
-      border-radius: 7px;
-      padding: 5px 20px;
-      color: #ffffff;
+    background-color: #780000;
+    border-radius: 7px;
+    padding: 5px 20px;
+    color: #ffffff;
   }
 }
-
