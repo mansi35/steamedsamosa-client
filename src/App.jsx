@@ -11,6 +11,7 @@ import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
 import CatererPage from './pages/CatererPage/CatererPage';
 import FloristPage from './pages/FloristPage/FloristPage';
+import PackageDescription from './pages/PackageDescription/PackageDescription';
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
             <Route exact path="/product" element={<ProductDescription />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/packagelist" element={<Packages />} />
+            <Route exact path="/package" element={<PackageDescription />} />
           </Routes>
+          <Footer />
         </div>
       </div>
     </Router>

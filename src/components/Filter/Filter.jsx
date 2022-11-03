@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
+import Rating from '@mui/material/rating';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import Switch from '@mui/material/Switch';
 // import Select from 'react-select';
 // import csc from 'country-state-city';
 // import { useFormik } from "formik";
@@ -14,6 +17,7 @@ function Filter() {
   const [budget, setBudget] = useState([7000, 136000]);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [premium, setPremium] = useState(false);
 
   const onStartDateChanged = (event) => {
     setStartDate(event.value);
@@ -25,6 +29,10 @@ function Filter() {
 
   const handleChange = (event, newValue) => {
     setBudget(newValue);
+  };
+
+  const toggle = () => {
+    setPremium(!premium);
   };
 
   return (
@@ -59,9 +67,7 @@ function Filter() {
         <p>
           BUDGET: (
           {budget[0]}
-          {' '}
           -
-          {' '}
           {budget[1]}
           )
         </p>
@@ -82,9 +88,17 @@ function Filter() {
       </div>
       <div className="filterCategory">
         <p>RATING</p>
+        <Rating
+          name="half-rating"
+          value={null}
+          size="large"
+          precision={0.5}
+          emptyIcon={<StarBorderIcon fontSize="inherit" sx={{ borderColor: 'white' }} />}
+        />
       </div>
       <div className="filterCategory">
         <p>SHOW ONLY PREMIUM</p>
+        <Switch onChange={toggle} />
       </div>
     </div>
   );

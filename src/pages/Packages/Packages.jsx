@@ -1,6 +1,6 @@
 import React from 'react';
-import Filter from '../../components/Filter/Filter';
 import Package from '../../components/Package/Package';
+import Filter from '../../components/Filter/Filter';
 import './Packages.scss';
 
 function Packages() {
@@ -12,7 +12,7 @@ function Packages() {
         customizable
         premium
         desc="Premium Catering (Veg + Non-Veg)$Surround Sound Music$Professional Beauticians$Photography Team"
-        rating={3}
+        rating={3.5}
         initPrice="31000"
         discounted="23000"
         image="https://www.weddingsutra.com/images/wedding-images/blog-images/wedding-packages/wedding-packages-14.WEBP"

@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
-import ReactStars from 'react-rating-stars-component';
+import Rating from '@mui/material/rating';
 import './Package.scss';
 
 function Package(props) {
@@ -34,12 +34,12 @@ function Package(props) {
         </div>
       </div>
       <div className="right">
-        <ReactStars
-          size={30}
+        <Rating
+          name="half-rating-read"
           value={props.rating}
-          isHalf
-          edit={false}
-          activeColor="orange"
+          size="large"
+          precision={0.5}
+          readOnly
         />
         <div className="prices">
           <s>
