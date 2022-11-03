@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+    .MuiSvgIcon-root {
+        color: #ffffff !important;
+    }
 }
 
 .filterCategory {

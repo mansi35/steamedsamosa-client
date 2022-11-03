@@ -3,7 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Auth from './pages/Auth/Auth';
 import Home from './pages/Home/Home';
-import Packages from './pages/Packages/Packages';
+import PackagesList from './pages/PackagesList/PackagesList';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Profile from './pages/Profile/Profile';
@@ -28,11 +28,10 @@ function App() {
             <Route exact path="/florist" element={<Florist />} />
             <Route exact path="/product" element={<ProductDescription />} />
             <Route exact path="/profile" element={<Profile />} />
-            <Route exact path="/packagelist" element={<Packages />} />
+            <Route exact path="/packagelist" element={<PackagesList />} />
             <Route exact path="/package" element={<PackageDescription />} />
             <Route exact path="/cart" element={<Cart />} />
           </Routes>
-          <Footer />
         </div>
         <Footer />
       </div>

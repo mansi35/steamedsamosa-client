@@ -1,0 +1,29 @@
+.packageslist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .packagelist__cards {
+        margin: 30px 60px;
+        width: -webkit-fill-available;
+    }
+
+    .loadMoreButton {
+        border: none;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #780000;
+        border-radius: 7px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .packageslist {
+        .packagelist__cards {
+            margin: 5px;
+        }
+    }
+}

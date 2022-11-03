@@ -39,7 +39,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #DADAE3;
+    background: #DADAE3 !important;
     padding: 10px;
     margin-left: 10px;
     margin: 7px;
@@ -48,7 +48,7 @@
 
     input {
       border: none;
-      background-color: transparent;
+      background: #DADAE3 !important;
       outline-width: 0;
       width: 100%;
     }

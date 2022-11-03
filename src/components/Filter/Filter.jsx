@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
-import Rating from '@mui/material/rating';
+import { Rating } from '@mui/material';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Switch from '@mui/material/Switch';
-// import Select from 'react-select';
-// import csc from 'country-state-city';
-// import { useFormik } from "formik";
 import './Filter.scss';
 
 function valuetext(value) {

@@ -29,5 +29,7 @@ module.exports = {
         },
       },
     ],
+    'react/destructuring-assignment': 'off',
+    'react/prop-types': 'off',
   },
 };
