@@ -1,12 +1,13 @@
 import React from 'react';
 import ProductPriceCard from '../../components/ProductPriceCard/ProductPriceCard';
 import TierBasedProducts from '../../components/TierBasedProducts/TierBasedProducts';
+import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
 import './ProductDescription.scss';
 
 function ProductDescription() {
   return (
     <div>
-      {/* conditional rendering based on type of product */}
+      <ImagesBanner />
       <div className="product__desc">
         <div className="product__type">
           <TierBasedProducts />
