@@ -3,9 +3,9 @@ import React from 'react';
 import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
 import MenuType from '../../components/MenuType/MenuType';
 import ProductPriceCard from '../../components/ProductPriceCard/ProductPriceCard';
-import './CatererPage.scss';
+import './Caterer.scss';
 
-function CatererPage() {
+function Caterer() {
   return (
     <div className="caterarpage">
       <ImagesBanner />
@@ -24,4 +24,4 @@ function CatererPage() {
   );
 }
 
-export default CatererPage;
+export default Caterer;

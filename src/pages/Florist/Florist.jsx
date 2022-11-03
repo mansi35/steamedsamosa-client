@@ -1,16 +1,19 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import FloristExtrasCard from '../../components/FloristExtrasCard/FloristExtrasCard';
 import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
 import ProductPriceCard from '../../components/ProductPriceCard/ProductPriceCard';
-import './FloristPage.scss';
+import './Florist.scss';
 
-function FloristPage() {
+function Florist() {
   return (
     <div className="floristpage">
       <ImagesBanner />
       <div className="floristpage__desc">
         <div className="floristpage__menu">
-          Florist Packages
+          {[...Array(80)].map((_) => (
+            <p>Florist Packages</p>
+          ))}
         </div>
         <div className="floristpage__order">
           <ProductPriceCard />
@@ -28,4 +31,4 @@ function FloristPage() {
   );
 }
 
-export default FloristPage;
+export default Florist;
