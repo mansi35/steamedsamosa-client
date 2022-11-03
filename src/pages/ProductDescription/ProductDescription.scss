@@ -1,0 +1,22 @@
+.product__desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .product__price {
+    width: 25%;
+    margin: 30px 60px 30px 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    i {
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+}

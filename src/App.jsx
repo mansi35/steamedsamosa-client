@@ -11,6 +11,7 @@ import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
 import CatererPage from './pages/CatererPage/CatererPage';
 import FloristPage from './pages/FloristPage/FloristPage';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
@@ -23,11 +24,14 @@ function App() {
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/caterer" element={<CatererPage />} />
+            <Route exact path="/florist" element={<FloristPage />} />
             <Route exact path="/product" element={<ProductDescription />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/packagelist" element={<Packages />} />
+            <Route exact path="/cart" element={<Cart />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
