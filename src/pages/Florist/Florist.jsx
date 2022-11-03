@@ -3,9 +3,9 @@ import React from 'react';
 import FloristExtrasCard from '../../components/FloristExtrasCard/FloristExtrasCard';
 import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
 import ProductPriceCard from '../../components/ProductPriceCard/ProductPriceCard';
-import './FloristPage.scss';
+import './Florist.scss';
 
-function FloristPage() {
+function Florist() {
   return (
     <div className="floristpage">
       <ImagesBanner />
@@ -31,4 +31,4 @@ function FloristPage() {
   );
 }
 
-export default FloristPage;
+export default Florist;

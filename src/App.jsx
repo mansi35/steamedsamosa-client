@@ -9,9 +9,10 @@ import Footer from './components/Footer/Footer';
 import Profile from './pages/Profile/Profile';
 import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
-import CatererPage from './pages/CatererPage/CatererPage';
-import FloristPage from './pages/FloristPage/FloristPage';
 import PackageDescription from './pages/PackageDescription/PackageDescription';
+import Caterer from './pages/Caterer/Caterer';
+import Florist from './pages/Florist/Florist';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
@@ -23,14 +24,17 @@ function App() {
           <Routes>
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/caterer" element={<CatererPage />} />
+            <Route exact path="/caterer" element={<Caterer />} />
+            <Route exact path="/florist" element={<Florist />} />
             <Route exact path="/product" element={<ProductDescription />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/packagelist" element={<Packages />} />
             <Route exact path="/package" element={<PackageDescription />} />
+            <Route exact path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
         </div>
+        <Footer />
       </div>
     </Router>
   );
