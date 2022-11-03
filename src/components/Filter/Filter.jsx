@@ -96,7 +96,7 @@ function Filter() {
           emptyIcon={<StarBorderIcon fontSize="inherit" sx={{ borderColor: 'white' }} />}
         />
       </div>
-      <div className="filterCategory">
+      <div className="filterCategory" style={{ alignItems: 'center' }}>
         <p>SHOW ONLY PREMIUM</p>
         <Switch onChange={toggle} />
       </div>
