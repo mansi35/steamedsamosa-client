@@ -1,0 +1,53 @@
+.addProductModal {
+  .addProductModal__open {
+    transition: 0.7s;
+    width: 55vw;
+    position: fixed;
+    height: 100vh;
+    background-color: #fdf0d5;
+    top: 0;
+    z-index: 10;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -5px 0px 25px 20px rgb(0 0 0 / 25%);
+    right: 0;
+    overflow-y: scroll;
+
+    .addProductModal__body {
+      margin: 15px;
+      .addProductModal__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .addProductModal__close {
+    transition: 0.7s;
+    width: 50vw;
+    position: fixed;
+    height: 100vh;
+    background-color: #fdf0d5;
+    top: 0;
+    z-index: 10;
+    border-radius: 20px 0 0 20px;
+    right: -50vw;
+    div {
+      margin: 30px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128,128,128,0.5);
+  z-index: 9;
+}

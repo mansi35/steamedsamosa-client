@@ -12,6 +12,10 @@
     .MuiSvgIcon-root {
         color: #ffffff !important;
     }
+
+    @media only screen and (max-width: 1000px) {
+        display: none;
+    }
 }
 
 .filterCategory {

@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
 import ProductPriceCard from '../../components/ProductPriceCard/ProductPriceCard';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import './PackageDescription.scss';
+import AddProductModal from '../../components/AddProductModal/AddProductModal';
 
 function Package() {
+  const [modalState, setModalState] = useState('close');
   return (
     <div className="package">
+      <AddProductModal modalState={modalState} setModalState={setModalState} />
       <ImagesBanner />
       <div className="package__desc">
         <div className="package__cardlist">
@@ -22,6 +25,7 @@ function Package() {
               initPrice="31000"
               discounted="23000"
               image="https://www.weddingsutra.com/images/wedding-images/blog-images/wedding-packages/wedding-packages-14.WEBP"
+              setModalState={setModalState}
             />
           ))}
         </div>

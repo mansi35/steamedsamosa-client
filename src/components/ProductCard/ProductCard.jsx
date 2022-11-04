@@ -6,7 +6,7 @@ function ProductCard(props) {
   return (
     <div className="pkg_component">
       <div className="left">
-        <img src={props.image} alt="Wedding" />
+        <img src={props.image} alt="Wedding" className={props.type === 'change-card' && 'productCard__change'} />
         <div className="text">
           <div className="productCard__heading">
             <h2>{props.name}</h2>
@@ -25,11 +25,11 @@ function ProductCard(props) {
               </div>
             )}
             {props.type === 'package-card' && (
-              <div className="tag">
+              <button className="tag" type="button" onClick={() => props.setModalState('open')}>
                 <p>
                   Customize
                 </p>
-              </div>
+              </button>
             )}
             {props.premium && props.type === 'list-card' && (
               <div className="tag">
@@ -46,14 +46,21 @@ function ProductCard(props) {
           </div>
         </div>
       </div>
-      <div className="right">
+      <div className="right" style={{ gap: props.type === 'change-card' ? '5px' : '35px' }}>
         {props.type === 'package-card' && (
           <div className="productCard__customizepackage">
-            <button type="button" className="productCard__editbtn">
+            <button type="button" className="productCard__editbtn" onClick={() => props.setModalState('open')}>
               Change
             </button>
             <button type="button" className="productCard__editbtn">
               Remove
+            </button>
+          </div>
+        )}
+        {props.type === 'change-card' && (
+          <div className="productCard__customizepackage">
+            <button type="button" className="productCard__editbtn">
+              Add
             </button>
           </div>
         )}
