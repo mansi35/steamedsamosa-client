@@ -1,13 +1,14 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
-import { Rating } from '@mui/material';
+import { Rating, Autocomplete, TextField } from '@mui/material';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Switch from '@mui/material/Switch';
 import './Filter.scss';
 
 function valuetext(value) {
-  return `${value} guests`;
+  return `${value}`;
 }
 
 function Filter() {
@@ -15,6 +16,7 @@ function Filter() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [premium, setPremium] = useState(false);
+  const sortByOptions = ['Price'];
 
   const onStartDateChanged = (event) => {
     setStartDate(event.value);
@@ -82,6 +84,14 @@ function Filter() {
       </div>
       <div className="filterCategory">
         <p>SORT BY</p>
+        <Autocomplete
+          disablePortal
+          clearOnEscape
+          id="combo-box-demo"
+          options={sortByOptions}
+          sx={{ width: 150, color: '#ffffff' }}
+          renderInput={(params) => <TextField {...params} />}
+        />
       </div>
       <div className="filterCategory">
         <p>RATING</p>
