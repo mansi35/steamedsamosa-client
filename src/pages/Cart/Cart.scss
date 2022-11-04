@@ -1,0 +1,18 @@
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  .cart__address__order {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    .big__item {
+      flex: 0 0 50%;
+    }
+    .small__item {
+      flex: 0 0 30%;
+    }
+  }
+}
