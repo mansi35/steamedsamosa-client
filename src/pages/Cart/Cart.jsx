@@ -17,7 +17,9 @@ function Cart() {
           <OrderSummary />
         </div>
       </div>
-      <ShoppingCart />
+      <div>
+        <ShoppingCart />
+      </div>
     </div>
   );
 }
