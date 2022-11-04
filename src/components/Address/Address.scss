@@ -3,11 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 60%;
-  margin: 4%;
   background: #fff8ea;
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  padding: 2%;
   .address__line {
     display: flex;
     flex-direction: column;
@@ -24,7 +23,7 @@
   .label__input {
     display: flex;
     flex-direction: column;
-    margin: 2%;
+    padding: 2%;
   }
   .checkbox {
     display: flex;
