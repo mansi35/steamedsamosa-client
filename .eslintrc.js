@@ -31,5 +31,6 @@ module.exports = {
     ],
     'react/destructuring-assignment': 'off',
     'react/prop-types': 'off',
+    'react/no-array-index-key': 'off',
   },
 };

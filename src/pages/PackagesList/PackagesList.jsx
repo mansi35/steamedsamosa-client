@@ -1,24 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Filter from '../../components/Filter/Filter';
 import './PackagesList.scss';
 
 function PackagesList() {
+  const { packages } = useSelector((state) => state.packages);
+
   return (
     <div className="packageslist">
       <Filter />
       <div className="packagelist__cards">
-        <ProductCard
-          type="list-card"
-          name="Dhamaka Wedding Package"
-          customizable
-          premium
-          desc="Premium Catering (Veg + Non-Veg)$Surround Sound Music$Professional Beauticians$Photography Team"
-          rating={3.5}
-          initPrice="31000"
-          discounted="23000"
-          image="https://www.weddingsutra.com/images/wedding-images/blog-images/wedding-packages/wedding-packages-14.WEBP"
-        />
+        {packages?.map((packageinfo, i) => (
+          <ProductCard
+            key={i}
+            type="list-card"
+            packageinfo={packageinfo}
+          />
+        ))}
         <ProductCard
           type="list-card"
           name="Dhamaka Wedding Package"
