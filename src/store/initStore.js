@@ -16,6 +16,12 @@ const initStore = () => {
       events: store.getState().events,
       packages: store.getState().packages,
       caterers: store.getState().caterers,
+      florists: store.getState().florists,
+      musicOptions: store.getState().musicOptions,
+      beauticians: store.getState().beauticians,
+      photographers: store.getState().photographers,
+      venues: store.getState().venues,
+      accomodations: store.getState().accomodations,
     });
   }, 1000));
 
