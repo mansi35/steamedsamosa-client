@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { registerLicense } from '@syncfusion/ej2-base';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from './App';
 import configureStore from './store/initStore';
@@ -15,8 +15,8 @@ const store = configureStore();
 
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    {/* <BrowserRouter> */}
+    <App />
+    {/* </BrowserRouter> */}
   </Provider>,
 );
