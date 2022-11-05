@@ -14,7 +14,9 @@ import PackageDescription from './pages/PackageDescription/PackageDescription';
 import Caterer from './pages/Caterer/Caterer';
 import Florist from './pages/Florist/Florist';
 import Cart from './pages/Cart/Cart';
-import { getEvents } from './actions/events';
+import {
+  getAccomodations, getBeauticians, getCaterers, getFlorists, getMusicOptions, getPhotographers, getVenues,
+} from './actions/events';
 import { getPackages } from './actions/packages';
 import CatererList from './pages/CatererList/CatererList';
 
@@ -22,8 +24,14 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getEvents());
     dispatch(getPackages());
+    dispatch(getCaterers());
+    dispatch(getFlorists());
+    dispatch(getVenues());
+    dispatch(getMusicOptions());
+    dispatch(getPhotographers());
+    dispatch(getBeauticians());
+    dispatch(getAccomodations());
   }, []);
 
   return (
