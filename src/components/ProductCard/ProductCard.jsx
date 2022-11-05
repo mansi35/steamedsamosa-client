@@ -2,36 +2,38 @@ import { Rating } from '@mui/material';
 import React from 'react';
 import './ProductCard.scss';
 
-function ProductCard(props) {
+function ProductCard({
+  key, type, packageinfo, setModalState,
+}) {
   return (
-    <div className="pkg_component">
+    <div className="pkg_component" key={key}>
       <div className="left">
-        <img src={props.image} alt="Wedding" className={props.type === 'change-card' && 'productCard__change'} />
+        <img src={packageinfo.packageImage.url} alt="Wedding" className={type === 'change-card' && 'productCard__change'} />
         <div className="text">
           <div className="productCard__heading">
-            <h2>{props.name}</h2>
-            {props.premium && props.type === 'package-card' && (
+            <h2>{packageinfo.name}</h2>
+            {packageinfo.isPremium && type === 'package-card' && (
               <div className="tag">
                 <p>Premium ✨</p>
               </div>
             )}
           </div>
           <div className="tags">
-            {props.customizable && props.type === 'list-card' && (
+            {packageinfo.isCustomizable && type === 'list-card' && (
               <div className="tag">
                 <p>
                   Customizable ✏️
                 </p>
               </div>
             )}
-            {props.type === 'package-card' && (
-              <button className="tag" type="button" onClick={() => props.setModalState('open')}>
+            {type === 'package-card' && (
+              <button className="tag" type="button" onClick={() => setModalState('open')}>
                 <p>
                   Customize
                 </p>
               </button>
             )}
-            {props.premium && props.type === 'list-card' && (
+            {packageinfo.isPremium && type === 'list-card' && (
               <div className="tag">
                 <p>Premium ✨</p>
               </div>
@@ -39,17 +41,17 @@ function ProductCard(props) {
           </div>
           <div className="description">
             <ul>
-              {props.desc.split('$').map((val) => (
+              {packageinfo.description.split('$').map((val) => (
                 <li>{val}</li>
               ))}
             </ul>
           </div>
         </div>
       </div>
-      <div className="right" style={{ gap: props.type === 'change-card' ? '5px' : '35px' }}>
-        {props.type === 'package-card' && (
+      <div className="right" style={{ gap: type === 'change-card' ? '5px' : '35px' }}>
+        {type === 'package-card' && (
           <div className="productCard__customizepackage">
-            <button type="button" className="productCard__editbtn" onClick={() => props.setModalState('open')}>
+            <button type="button" className="productCard__editbtn" onClick={() => setModalState('open')}>
               Change
             </button>
             <button type="button" className="productCard__editbtn">
@@ -57,7 +59,7 @@ function ProductCard(props) {
             </button>
           </div>
         )}
-        {props.type === 'change-card' && (
+        {type === 'change-card' && (
           <div className="productCard__customizepackage">
             <button type="button" className="productCard__editbtn">
               Add
@@ -67,7 +69,7 @@ function ProductCard(props) {
         <div className="productCard__ratingPrice">
           <Rating
             name="half-rating-read"
-            value={props.rating}
+            value={packageinfo.rating}
             size="large"
             precision={0.5}
             readOnly
@@ -75,15 +77,15 @@ function ProductCard(props) {
           <div className="prices">
             <s>
               ₹
-              {props.initPrice}
+              {packageinfo.initPrice}
             </s>
             <p>
               ₹
-              {props.discounted}
+              {packageinfo.discounted}
             </p>
           </div>
         </div>
-        {props.type === 'list-card' && (
+        {type === 'list-card' && (
           <button type="button" className="bookbutton">
             Book Now
           </button>

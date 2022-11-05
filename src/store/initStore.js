@@ -13,6 +13,9 @@ const initStore = () => {
 
   store.subscribe(throttle(() => {
     saveState({
+      events: store.getState().events,
+      packages: store.getState().packages,
+      caterers: store.getState().caterers,
     });
   }, 1000));
 
