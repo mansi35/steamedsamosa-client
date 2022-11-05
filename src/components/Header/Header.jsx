@@ -1,5 +1,6 @@
 import { Avatar } from '@mui/material';
 import { Search } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 import logo from '../../images/logo.png';
 import './Header.scss';
@@ -9,7 +10,7 @@ function Header() {
     <div className="header">
       <div className="header__logo">
         <img src={logo} alt="samosa logo" />
-        <p>sTEAMed SaMoSA</p>
+        <NavLink to="/"><p>sTEAMed SaMoSA</p></NavLink>
       </div>
       <div className="header__search">
         <input placeholder="What are you looking for..." />

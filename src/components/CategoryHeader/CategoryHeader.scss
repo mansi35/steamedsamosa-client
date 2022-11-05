@@ -6,6 +6,13 @@
   background-color: #780000;
   color: #ffffff;
 
+  a {
+    color: #ffffff !important;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
   .categoryheader__category {
     display: flex;
     flex-direction: column;

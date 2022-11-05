@@ -8,7 +8,7 @@ function ProductCard({
   return (
     <div className="pkg_component" key={key}>
       <div className="left">
-        <img src={packageinfo.packageImage.url} alt="Wedding" className={type === 'change-card' && 'productCard__change'} />
+        <img src={packageinfo.images[0].url} alt="Wedding" className={type === 'change-card' && 'productCard__change'} />
         <div className="text">
           <div className="productCard__heading">
             <h2>{packageinfo.name}</h2>
@@ -41,7 +41,7 @@ function ProductCard({
           </div>
           <div className="description">
             <ul>
-              {packageinfo.description.split('$').map((val) => (
+              {packageinfo.basicDescription.split('$').map((val) => (
                 <li>{val}</li>
               ))}
             </ul>
@@ -77,7 +77,7 @@ function ProductCard({
           <div className="prices">
             <s>
               ₹
-              {packageinfo.initPrice}
+              {packageinfo.basicPrice}
             </s>
             <p>
               ₹
