@@ -13,13 +13,10 @@
         color: #ffffff !important;
     }
 
-    .MuiOutlinedInput-root {
-        color: #ffffff !important;
-    }
-    
-    @media only screen and (max-width: 1000px) {
-        display: none;
-    }
+    .MuiAutocomplete-root {
+        border: 1px solid white;
+        border-radius: 4px;
+}
 }
 
 .filterCategory {

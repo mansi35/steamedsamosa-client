@@ -5,6 +5,7 @@ import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { Rating, Autocomplete, TextField } from '@mui/material';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Switch from '@mui/material/Switch';
+import cities from './cities';
 import './Filter.scss';
 
 function valuetext(value) {
@@ -81,6 +82,18 @@ function Filter() {
       </div>
       <div className="filterCategory">
         <p>LOCATION</p>
+        <Autocomplete
+          disablePortal
+          clearOnEscape
+          id="combo-box-demo"
+          options={cities}
+          sx={{ width: 150 }}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+            />
+          )}
+        />
       </div>
       <div className="filterCategory">
         <p>SORT BY</p>
@@ -100,7 +113,9 @@ function Filter() {
           value={null}
           size="large"
           precision={0.5}
-          emptyIcon={<StarBorderIcon fontSize="inherit" sx={{ borderColor: 'white' }} />}
+          emptyIcon={
+            <StarBorderIcon fontSize="inherit" sx={{ borderColor: 'white' }} />
+          }
         />
       </div>
       <div className="filterCategory" style={{ alignItems: 'center' }}>
