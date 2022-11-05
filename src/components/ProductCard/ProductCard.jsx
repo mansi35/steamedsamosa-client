@@ -1,5 +1,5 @@
 import { Rating } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProductCard.scss';
 
 function ProductCard({
@@ -8,24 +8,24 @@ function ProductCard({
   const [discountPrice, setDiscountPrice] = useState(packageinfo.basicPrice);
   const [averageRating, setAverageRating] = useState(0);
 
-  function set_DiscountPrice() {
+  function setDiscountedPrice() {
     const price = packageinfo.basicPrice;
-    const discount = packageinfo.discount;
-    setDiscountPrice(max(discount / 100 * price, price - packageinfo.maxDiscountValue));
+    const { discount } = packageinfo;
+    setDiscountPrice(Math.max((discount / 100) * price, price - packageinfo.maxDiscountValue));
   }
 
-  function set_AverageRating() {
-    const numberOfRatings = 0;
-    packageinfo.customer_reviews.forEach(review => {
-      averageRating += review.rating;
-      numberOfRatings++;
+  function setAveragedRating() {
+    let numberOfRatings = 0;
+    packageinfo.customer_reviews.forEach((review) => {
+      setAverageRating(averageRating + review.rating);
+      numberOfRatings += 1;
     });
     setAverageRating(averageRating / numberOfRatings);
   }
 
   useEffect(() => {
-    set_DiscountPrice();
-    set_AverageRating();
+    setDiscountedPrice();
+    setAveragedRating();
   });
 
   return (
@@ -103,7 +103,9 @@ function ProductCard({
               {packageinfo.basicPrice}
             </s>
             <p>
-              ₹ {discountPrice}
+              ₹
+              {' '}
+              {discountPrice}
             </p>
           </div>
         </div>
