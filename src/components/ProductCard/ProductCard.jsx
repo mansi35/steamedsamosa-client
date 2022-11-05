@@ -8,13 +8,13 @@ function ProductCard({
   const [discountPrice, setDiscountPrice] = useState(packageinfo.basicPrice);
   const [averageRating, setAverageRating] = useState(0);
 
-  function setDiscountPrice() {
+  function set_DiscountPrice() {
     const price = packageinfo.basicPrice;
     const discount = packageinfo.discount;
     setDiscountPrice(max(discount / 100 * price, price - packageinfo.maxDiscountValue));
   }
 
-  function setAverageRating() {
+  function set_AverageRating() {
     const numberOfRatings = 0;
     packageinfo.customer_reviews.forEach(review => {
       averageRating += review.rating;
@@ -24,8 +24,8 @@ function ProductCard({
   }
 
   useEffect(() => {
-    setDiscountPrice();
-    setAverageRating();
+    set_DiscountPrice();
+    set_AverageRating();
   });
 
   return (
