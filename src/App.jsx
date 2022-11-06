@@ -25,6 +25,12 @@ import {
 } from './actions/events';
 import { getPackages } from './actions/packages';
 import CatererList from './pages/CatererList/CatererList';
+import MusicOptionsList from './pages/MusicOptionsList/MusicOptionsList';
+import BeauticiansList from './pages/BeauticiansList/BeauticiansList';
+import AccomodationsList from './pages/AccomodationsList/AccomodationsList';
+import FloristList from './pages/FloristList/FloristList';
+import PhotographersList from './pages/PhotographersList/PhotographersList';
+import VenueList from './pages/VenueList/VenueList';
 
 function App() {
   const dispatch = useDispatch();
@@ -49,14 +55,25 @@ function App() {
           <Routes>
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/caterer" element={<Caterer />} />
-            <Route exact path="/florist" element={<Florist />} />
             <Route exact path="/caterers" element={<CatererList />} />
             <Route
               exact
               path="/products/:productid"
               element={<ProductDescription />}
             />
+            <Route exact path="/florists" element={<FloristList />} />
+            <Route exact path="/music" element={<MusicOptionsList />} />
+            <Route exact path="/photographers" element={<PhotographersList />} />
+            <Route exact path="/venues" element={<VenueList />} />
+            <Route exact path="/beauticians" element={<BeauticiansList />} />
+            <Route exact path="/accomodations" element={<AccomodationsList />} />
+            <Route exact path="/catering/:productid" element={<Caterer />} />
+            <Route exact path="/florists/:productid" element={<Florist />} />
+            <Route exact path="/music/:productid" element={<ProductDescription />} />
+            <Route exact path="/photography/:productid" element={<ProductDescription />} />
+            <Route exact path="/venues/:productid" element={<ProductDescription />} />
+            <Route exact path="/makeup/:productid" element={<ProductDescription />} />
+            <Route exact path="/accomodations/:productid" element={<ProductDescription />} />
             <Route exact path="/packages" element={<PackagesList />} />
             <Route
               exact

@@ -6,6 +6,7 @@ import '../PackagesList/PackagesList.scss';
 
 function BeauticiansList() {
   const { beauticians } = useSelector((state) => state.beauticians);
+  // console.log(beauticians[0]);
   return (
     <div className="packageslist">
       <Filter />

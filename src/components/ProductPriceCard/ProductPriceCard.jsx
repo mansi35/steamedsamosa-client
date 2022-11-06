@@ -11,6 +11,7 @@ function ProductPriceCard() {
   const [numGuests, setNumGuests] = useState([0, 500]);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const eventProfile = JSON.parse(localStorage.getItem('eventDetails'));
 
   const handleChange = (event, newValue) => {
     setNumGuests(newValue);
@@ -28,12 +29,12 @@ function ProductPriceCard() {
     <div className="pricecard">
       <div className="pricecard__pricedesc">
         <div className="pricecard__price">
-          <s>₹31,000</s>
-          <h2>₹20,000</h2>
+          <s>{eventProfile.basicPrice}</s>
+          <h2>{eventProfile.basicPrice - (eventProfile.discount / 100) * eventProfile.basicPrice}</h2>
           <p>excluding applicable taxes</p>
         </div>
         <div className="pricecard__discount">
-          <b>29% off</b>
+          <b>{eventProfile.discount}</b>
         </div>
       </div>
       <div className="pricecard_guests">

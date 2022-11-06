@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './CategoryHeader.scss';
 import packages from '../../images/Packages.png';
 import florist from '../../images/Florist.png';
@@ -13,36 +14,52 @@ function CategoryHeader() {
   return (
     <div className="categoryheader">
       <div className="categoryheader__category">
-        <img src={packages} alt="complete packages" />
-        <p>Packages</p>
+        <NavLink to="/packages">
+          <img src={packages} alt="complete packages" />
+          <p>Packages</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={florist} alt="floral decorations" />
-        <p>Florist</p>
+        <NavLink to="/florists">
+          <img src={florist} alt="floral decorations" />
+          <p>Florist</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={music} alt="DJ and Band" />
-        <p>Music</p>
+        <NavLink to="/music">
+          <img src={music} alt="DJ and Band" />
+          <p>Music</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={food} alt="Food" />
-        <p>Food</p>
+        <NavLink to="/caterers">
+          <img src={food} alt="Food" />
+          <p>Food</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={venue} alt="Venue" />
-        <p>Venue</p>
+        <NavLink to="/venues">
+          <img src={venue} alt="Venue" />
+          <p>Venue</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={beautician} alt="Makeup packages" />
-        <p>Beauticians</p>
+        <NavLink to="/beauticians">
+          <img src={beautician} alt="Makeup packages" />
+          <p>Beauticians</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={accomodation} alt="Accomodation" />
-        <p>Accomodation</p>
+        <NavLink to="/accomodations">
+          <img src={accomodation} alt="Accomodation" />
+          <p>Accomodation</p>
+        </NavLink>
       </div>
       <div className="categoryheader__category">
-        <img src={photography} alt="photography packages" />
-        <p>Photography</p>
+        <NavLink to="/photographers">
+          <img src={photography} alt="photography packages" />
+          <p>Photography</p>
+        </NavLink>
       </div>
     </div>
   );

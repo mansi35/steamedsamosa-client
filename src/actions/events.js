@@ -51,6 +51,7 @@ export const getVenues = () => async (dispatch) => {
 export const getBeauticians = () => async (dispatch) => {
   try {
     const { data } = await api.fetchBeauticians();
+    console.log(data);
     dispatch({ type: FETCH_BEAUTICIANS, payload: data });
   } catch (error) {
     console.log(error);

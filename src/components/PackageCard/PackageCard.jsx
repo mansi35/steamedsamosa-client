@@ -1,33 +1,38 @@
 import { Rating } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ProductCard.scss';
+import './PackageCard.scss';
 
-function ProductCard({
+function PackageCard({
   key, type, packageinfo, setModalState,
 }) {
   const [discountPrice, setDiscountPrice] = useState(packageinfo.basicPrice);
+  const [initPrice, setInitPrice] = useState();
   const [averageRating, setAverageRating] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
-    setDiscountPrice(packageinfo.basicPrice - (packageinfo.discount / 100) * packageinfo.basicPrice);
     let numberOfRatings = 0;
     let sumOfRatings = 0;
+    let totalPrice = 0;
+    let discountedPrice = 0;
+    packageinfo.events.forEach((product) => {
+      totalPrice += Number(product.basicPrice);
+      discountedPrice += Number(product.basicPrice - (product.discount / 100) * product.basicPrice);
+    });
+    setInitPrice(totalPrice);
+    setDiscountPrice(discountedPrice);
     packageinfo.customer_reviews.forEach((review) => {
-      console.log(`review rating = ${review.rating}`);
       sumOfRatings += review.rating;
-      console.log(`sum=${sumOfRatings}`);
       numberOfRatings += 1;
     });
     setAverageRating(sumOfRatings / numberOfRatings);
-    console.log(`av rating = ${averageRating}`);
   });
 
   return (
     <div className="pkg_component" key={key}>
       <div className="left">
-        <img src={packageinfo.images[0].url} alt="Wedding" className={type === 'change-card' && 'productCard__change'} />
+        <img src={packageinfo.packageImage.url} alt="Wedding" className={type === 'change-card' && 'productCard__change'} />
         <div className="text">
           <div className="productCard__heading">
             <h2>{packageinfo.name}</h2>
@@ -60,7 +65,7 @@ function ProductCard({
           </div>
           <div className="description">
             <ul>
-              {packageinfo.basicDescription.split('$').map((val) => (
+              {packageinfo.description.split('$').map((val) => (
                 <li>{val}</li>
               ))}
             </ul>
@@ -96,7 +101,7 @@ function ProductCard({
           <div className="prices">
             <s>
               ₹
-              {packageinfo.basicPrice}
+              {initPrice}
             </s>
             <p>
               ₹
@@ -111,7 +116,7 @@ function ProductCard({
             className="bookbutton"
             onClick={() => {
               localStorage.setItem('eventDetails', JSON.stringify(packageinfo));
-              navigate(`/${packageinfo.eventType}/${packageinfo.id}`);
+              navigate(`/packages/${packageinfo.id}`);
             }}
           >
             Book Now
@@ -122,4 +127,4 @@ function ProductCard({
   );
 }
 
-export default ProductCard;
+export default PackageCard;
