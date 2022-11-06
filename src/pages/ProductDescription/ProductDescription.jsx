@@ -7,7 +7,8 @@ import MenuType from '../../components/MenuType/MenuType';
 import FloristExtrasCard from '../../components/FloristExtrasCard/FloristExtrasCard';
 
 function ProductDescription() {
-  const productProfile = JSON.parse(localStorage.getItem('productDetails'));
+  const productProfile = JSON.parse(localStorage.getItem('eventDetails'));
+  console.log(productProfile);
   return (
     <div>
       <ImagesBanner />

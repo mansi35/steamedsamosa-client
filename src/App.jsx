@@ -11,8 +11,8 @@ import Profile from './pages/Profile/Profile';
 import ProductDescription from './pages/ProductDescription/ProductDescription';
 import CategoryHeader from './components/CategoryHeader/CategoryHeader';
 import PackageDescription from './pages/PackageDescription/PackageDescription';
-// import Caterer from './pages/Caterer/Caterer';
-// import Florist from './pages/Florist/Florist';
+import Caterer from './pages/Caterer/Caterer';
+import Florist from './pages/Florist/Florist';
 import Cart from './pages/Cart/Cart';
 import {
   getAccomodations, getBeauticians, getCaterers, getFlorists, getMusicOptions, getPhotographers, getVenues,
@@ -56,7 +56,13 @@ function App() {
             <Route exact path="/venues" element={<VenueList />} />
             <Route exact path="/beauticians" element={<BeauticiansList />} />
             <Route exact path="/accomodations" element={<AccomodationsList />} />
-            <Route exact path="/products/:productid" element={<ProductDescription />} />
+            <Route exact path="/catering/:productid" element={<Caterer />} />
+            <Route exact path="/florists/:productid" element={<Florist />} />
+            <Route exact path="/music/:productid" element={<ProductDescription />} />
+            <Route exact path="/photography/:productid" element={<ProductDescription />} />
+            <Route exact path="/venues/:productid" element={<ProductDescription />} />
+            <Route exact path="/makeup/:productid" element={<ProductDescription />} />
+            <Route exact path="/accomodations/:productid" element={<ProductDescription />} />
             <Route exact path="/packages" element={<PackagesList />} />
             <Route exact path="/packages/:packageid" element={<PackageDescription />} />
             <Route exact path="/profile" element={<Profile />} />

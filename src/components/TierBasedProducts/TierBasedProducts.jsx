@@ -3,35 +3,46 @@
 import React, { useState, useEffect } from 'react';
 import './TierBasedProducts.scss';
 
-function TierBasedProducts() {
+function TierBasedProducts({ product }) {
   const [basicText, setBasicText] = useState(['']);
   const [standardText, setStandardText] = useState(['']);
   const [premiumText, setPremiumText] = useState(['']);
   const [text, setText] = useState(['']);
   const [knownState, setKnownState] = useState(false);
   const [num, setNum] = useState(1);
+  const [basicPrice, setBasicPrice] = useState(0);
+  const [standardPrice, setStandardPrice] = useState(0);
+  const [premiumPrice, setPremiumPrice] = useState(0);
+  const [price, setPrice] = useState(0);
 
   const handleBasicClick = () => {
     setText(basicText);
     setKnownState(true);
     setNum(1);
+    setPrice(basicPrice);
   };
   const handleStandardClick = () => {
     setText(standardText);
     setKnownState(true);
     setNum(2);
+    setPrice(standardPrice);
   };
   const handlePremiumClick = () => {
     setText(premiumText);
     setKnownState(true);
     setNum(3);
+    setPrice(premiumPrice);
   };
 
   useEffect(() => {
-    setBasicText(['aspernatur aut odit aut fugit sed quia consequuntur magni dolores', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem', 'quae ab illo inventore veritatis et quasi architecto beatae vitae', 'dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit']);
-    setStandardText(['dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit', 'aspernatur aut odit aut fugit sed quia consequuntur magni dolores', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem', 'quae ab illo inventore veritatis et quasi architecto beatae vitae']);
-    setPremiumText(['Sed ut perspiciatis unde omnis iste natus error sit voluptatem', 'aspernatur aut odit aut fugit sed quia consequuntur magni dolores', 'dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit', 'quae ab illo inventore veritatis et quasi architecto beatae vitae']);
-  });
+    setBasicText(product.basicDescription.split('$'));
+    setStandardText(product.standardDescription.split('$'));
+    setPremiumText(product.premiumDescription.split('$'));
+    setBasicPrice(product.basicPrice);
+    setStandardPrice(product.standardPrice);
+    setPremiumPrice(product.premiumPrice);
+    setPrice(product.basicPrice);
+  }, []);
 
   return (
     <div className="tier__description">
@@ -43,20 +54,20 @@ function TierBasedProducts() {
       <div className="description">
         <div className="price__discount">
           <div className="price">
-            <s className="original__price">31,000</s>
+            <s className="original__price">{price}</s>
             <p className="new__price">23,000</p>
           </div>
           <div className="discount">20% off</div>
         </div>
         {knownState && (
-        <ul>
-          {text.map((txt) => <li>{txt}</li>)}
-        </ul>
+          <ul>
+            {text.map((txt) => <li>{txt}</li>)}
+          </ul>
         )}
         {!knownState && (
-        <ul>
-          {basicText.map((txt) => <li>{txt}</li>)}
-        </ul>
+          <ul>
+            {basicText.map((txt) => <li>{txt}</li>)}
+          </ul>
         )}
       </div>
     </div>

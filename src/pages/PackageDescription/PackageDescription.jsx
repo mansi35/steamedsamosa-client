@@ -2,29 +2,24 @@
 import React, { useState } from 'react';
 import ImagesBanner from '../../components/ImagesBanner/ImagesBanner';
 import ProductPriceCard from '../../components/ProductPriceCard/ProductPriceCard';
-import ProductCard from '../../components/ProductCard/ProductCard';
 import './PackageDescription.scss';
 import AddProductModal from '../../components/AddProductModal/AddProductModal';
+import ProductCard from '../../components/ProductCard/ProductCard';
 
 function Package() {
   const [modalState, setModalState] = useState('close');
+  const eventProfile = JSON.parse(localStorage.getItem('eventDetails'));
   return (
     <div className="package">
       <AddProductModal modalState={modalState} setModalState={setModalState} />
       <ImagesBanner />
       <div className="package__desc">
         <div className="package__cardlist">
-          {[...Array(5)].map((_) => (
+          {eventProfile.events.map((event, i) => (
             <ProductCard
+              key={i}
               type="package-card"
-              name="Banquet Paradise"
-              customizable
-              premium
-              desc="Premium Catering (Veg + Non-Veg)$Surround Sound Music$Professional Beauticians$Photography Team"
-              rating={3.5}
-              initPrice="31000"
-              discounted="23000"
-              image="https://www.weddingsutra.com/images/wedding-images/blog-images/wedding-packages/wedding-packages-14.WEBP"
+              packageinfo={event}
               setModalState={setModalState}
             />
           ))}
