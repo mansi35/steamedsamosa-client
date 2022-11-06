@@ -15,7 +15,13 @@ import Caterer from './pages/Caterer/Caterer';
 import Florist from './pages/Florist/Florist';
 import Cart from './pages/Cart/Cart';
 import {
-  getAccomodations, getBeauticians, getCaterers, getFlorists, getMusicOptions, getPhotographers, getVenues,
+  getAccomodations,
+  getBeauticians,
+  getCaterers,
+  getFlorists,
+  getMusicOptions,
+  getPhotographers,
+  getVenues,
 } from './actions/events';
 import { getPackages } from './actions/packages';
 import CatererList from './pages/CatererList/CatererList';
@@ -50,6 +56,11 @@ function App() {
             <Route exact path="/auth" element={<Auth />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/caterers" element={<CatererList />} />
+            <Route
+              exact
+              path="/products/:productid"
+              element={<ProductDescription />}
+            />
             <Route exact path="/florists" element={<FloristList />} />
             <Route exact path="/music" element={<MusicOptionsList />} />
             <Route exact path="/photographers" element={<PhotographersList />} />
@@ -64,7 +75,11 @@ function App() {
             <Route exact path="/makeup/:productid" element={<ProductDescription />} />
             <Route exact path="/accomodations/:productid" element={<ProductDescription />} />
             <Route exact path="/packages" element={<PackagesList />} />
-            <Route exact path="/packages/:packageid" element={<PackageDescription />} />
+            <Route
+              exact
+              path="/packages/:packageid"
+              element={<PackageDescription />}
+            />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/cart" element={<Cart />} />
           </Routes>
