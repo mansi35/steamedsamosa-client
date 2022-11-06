@@ -9,6 +9,7 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 function Package() {
   const [modalState, setModalState] = useState('close');
   const eventProfile = JSON.parse(localStorage.getItem('eventDetails'));
+  console.log(eventProfile);
   return (
     <div className="package">
       <AddProductModal modalState={modalState} setModalState={setModalState} />

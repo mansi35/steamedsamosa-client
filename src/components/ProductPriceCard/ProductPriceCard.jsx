@@ -79,7 +79,26 @@ function ProductPriceCard() {
           cssClass="e-customStyle"
         />
       </div>
-      <button type="button"><b>Add To Cart</b></button>
+      <button
+        style={{ cursor: 'pointer' }}
+        type="button"
+        onClick={() => {
+          const existing = JSON.parse(localStorage.getItem('cartItems'));
+          if (existing === null) {
+            localStorage.setItem('cartItems', JSON.stringify(eventProfile));
+          } else if (Array.isArray(existing)) {
+            const updated = [...existing, eventProfile];
+            localStorage.setItem('cartItems', JSON.stringify(updated));
+            // existing.append(eventProfile);
+          } else {
+            const updated = [existing, eventProfile];
+            localStorage.setItem('cartItems', JSON.stringify(updated));
+          }
+        }}
+      >
+        <b>Add To Cart</b>
+
+      </button>
     </div>
   );
 }
