@@ -32,7 +32,7 @@ function CategoryHeader() {
         </NavLink>
       </div>
       <div className="categoryheader__category">
-        <NavLink to="/caterer">
+        <NavLink to="/caterers">
           <img src={food} alt="Food" />
           <p>Food</p>
         </NavLink>
